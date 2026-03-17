@@ -180,7 +180,7 @@ export default function Home() {
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && addTodo()}
               placeholder="タスクを入力..."
-              className="flex-1 px-4 py-2.5 rounded-xl border border-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 text-sm placeholder-gray-400"
+              className="flex-1 px-4 py-2.5 rounded-xl border border-indigo-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 text-sm text-gray-800 placeholder-gray-400"
             />
             <button
               onClick={addTodo}
@@ -208,7 +208,7 @@ export default function Home() {
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="px-2.5 py-1 rounded-lg text-xs border border-gray-200 text-gray-600 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-indigo-300"
+              className="px-2.5 py-1 rounded-lg text-xs border border-gray-200 text-gray-800 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-indigo-300"
             >
               {CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
             </select>
@@ -217,7 +217,7 @@ export default function Home() {
               type="date"
               value={dueDate}
               onChange={(e) => setDueDate(e.target.value)}
-              className="px-2.5 py-1 rounded-lg text-xs border border-gray-200 text-gray-600 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-indigo-300"
+              className="px-2.5 py-1 rounded-lg text-xs border border-gray-200 text-gray-800 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-indigo-300"
             />
           </div>
         </div>
@@ -288,7 +288,7 @@ export default function Home() {
                         if (e.key === "Escape") cancelEdit();
                       }}
                       autoFocus
-                      className="w-full px-3 py-1.5 text-sm border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                      className="w-full px-3 py-1.5 text-sm text-gray-800 border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"
                     />
                     <div className="flex gap-2 flex-wrap items-center">
                       <div className="flex gap-1">
@@ -307,7 +307,7 @@ export default function Home() {
                       <select
                         value={editCategory}
                         onChange={(e) => setEditCategory(e.target.value)}
-                        className="px-2 py-0.5 rounded text-xs border border-gray-200 bg-gray-50 focus:outline-none"
+                        className="px-2 py-0.5 rounded text-xs border border-gray-200 text-gray-800 bg-gray-50 focus:outline-none"
                       >
                         {CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
                       </select>
@@ -315,7 +315,7 @@ export default function Home() {
                         type="date"
                         value={editDueDate}
                         onChange={(e) => setEditDueDate(e.target.value)}
-                        className="px-2 py-0.5 rounded text-xs border border-gray-200 bg-gray-50 focus:outline-none"
+                        className="px-2 py-0.5 rounded text-xs border border-gray-200 text-gray-800 bg-gray-50 focus:outline-none"
                       />
                       <div className="flex gap-1 ml-auto">
                         <button onClick={() => confirmEdit(todo.id)} className="text-xs px-2 py-1 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition">保存</button>
